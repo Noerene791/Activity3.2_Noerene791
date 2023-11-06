@@ -155,6 +155,15 @@ ALTER TABLE item
 ADD COLUMN item_price
 DECIMAL(10,2);
 
+SELECT player.player_name
+hero.hero_name
+FROM player
+INNER JOIN hero ON
+player.hero_id =
+hero.hero_id
+WHERE hero.is_active =
+true;
+
 UPDATE hero
 SET is_active = false
 WHERE hero_id = 1;
