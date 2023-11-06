@@ -161,3 +161,12 @@ WHERE hero_id = 1;
 
 DELETE FROM item
 WHERE hero_id = 1;
+
+SELECT hero.hero_name
+FROM hero
+INNER JOIN class ON
+hero.class_id = 
+class.class_id
+WHERE class.class_name
+LIKE
+LOWER('%Archer%');
