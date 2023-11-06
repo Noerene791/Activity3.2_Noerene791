@@ -153,4 +153,11 @@ VALUES
 
 ALTER TABLE item
 ADD COLUMN item_price
-DECIMAL(1O,2);
+DECIMAL(10,2);
+
+UPDATE hero
+SET is_active = false
+WHERE hero_id = 1;
+
+DELETE FROM item
+WHERE hero_id = 1;
