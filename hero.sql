@@ -161,3 +161,14 @@ WHERE hero_id = 1;
 
 DELETE FROM item
 WHERE hero_id = 1;
+
+SELECT class.class_name,
+AVG(player.player_level) AS
+avg_level
+FROM class
+JOIN hero ON class.class_id
+= hero.class_id
+JOIN player ON hero.hero_id
+=player.hero_id
+GROUP BY class.class_name
+ORDER BY avg_level DESC;
